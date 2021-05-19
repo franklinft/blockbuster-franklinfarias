@@ -1,0 +1,92 @@
+<h1 mat-dialog-title class="dialog-title">Atualizar título</h1>
+<div mat-dialog-content>
+  <mat-card-content class="movie-container-image">
+    <img mat-card-image class="movie-image" src="{{data.poster}}" alt="Photo of a Shiba Inu">
+  </mat-card-content>
+
+  <div class="form-container">
+    <mat-form-field appearance="outline" class="flex-grow-1">
+      <mat-label>Número do filme</mat-label>
+      <input matInput placeholder="Número Filme" value="{{data?.numeroFilme}}">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo Produto</mat-label>
+      <mat-select>
+        <mat-option>
+          {{data.tipoProduto}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo Filme</mat-label>
+      <mat-select>
+        <mat-option>
+          {{data.tipoFilme}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="flex-grow-3">
+      <mat-label>Título</mat-label>
+      <input matInput placeholder="Título" [value]="data?.nome">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="flex-grow-3">
+      <mat-label>Atores</mat-label>
+      <input matInput placeholder="Diretor" [value]="data?.diretor">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="flex-grow-3">
+      <mat-label>Diretores</mat-label>
+      <input matInput placeholder="Diretor" [value]="data?.diretor">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="flex-grow-3">
+      <mat-label>Fornecedor</mat-label>
+      <input matInput placeholder="Diretor" [value]="data?.fornecedor">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Gênero</mat-label>
+      <mat-select>
+        <mat-option>
+          {{data.genero}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="flex-grow-3">
+      <mat-label>Idioma</mat-label>
+      <input matInput placeholder="Título" [value]="data?.idioma">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="flex-grow-3">
+      <mat-label>Valor da locação</mat-label>
+      <input matInput placeholder="Título" [value]="data?.preco">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="flex-grow-3">
+      <mat-label>Data cadastro</mat-label>
+      <input matInput placeholder="Título" type="date" [value]="data?.dataCadastro">
+    </mat-form-field>
+
+    <p class="w-100 d-flex">
+      <mat-form-field class="flex-grow-4" appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput placeholder="Descrição do título..." rows="20" [value]="data?.descricao"></textarea>
+      </mat-form-field>
+    </p>
+  </div>
+</div>
+
+<mat-dialog-actions align="end">
+  <button mat-button color="primary" mat-dialog-close type="submit">
+    <span>Cancelar</span>
+  </button>
+  <button mat-raised-button color="primary" type="submit">
+    <span>Salvar</span> <span class="material-icons">save</span>
+  </button>
+</mat-dialog-actions>
+

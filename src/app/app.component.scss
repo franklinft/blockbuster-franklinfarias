@@ -1,10 +1,49 @@
 .header {
-  display: flex;
   width: 100%;
-  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  height: 80px;
+  background: #151515;
 
   .logo {
-    color: #f37100;
+    color: #ffc107;
     font-weight: bold;
+    width: 66.66%;
+    position: relative;
+    top: 25px;
+    left: 25px;
+  }
+
+  .search {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+  }
+
+  ::ng-deep .mat-form-field-flex {
+    width: 100%;
+    background: #585858;
+    color: #d0d0d0;
+    border-radius: 5px;
+  }
+
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px 4px 0 0;
+    width: 450px !important;
+    padding: 5px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .header {
+    .logo {
+      font-size: 16px;
+    }
+
+    ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+      width: 150px !important;
+    }
   }
 }

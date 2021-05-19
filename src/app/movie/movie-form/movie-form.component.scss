@@ -1,0 +1,68 @@
+::ng-deep mat-dialog-container {
+  background: #3b3a3a !important;
+  color: #d0d0d0;
+
+  .mat-dialog-content {
+    display: flex;
+    flex-direction: row;
+
+    .movie-container-image {
+      width: 16.66%;
+
+      .mat-card-image {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 83.33%;
+    }
+  }
+
+  .dialog-title {
+    color: #d0d0d0;
+  }
+
+  .mat-form-field {
+    margin: 5px;
+  }
+
+  .mat-form-field-flex {
+    background: #585858;
+    color: #d0d0d0;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+
+  .mat-form-field-flex {
+    margin: 5px;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.btn-save {
+  justify-content: end;
+}
+
+@media (max-width: 768px) {
+  .mat-dialog-content {
+    width: 100%;
+    flex-direction: column;
+
+    .movie-container-image {
+      width: 91.66%;
+    }
+
+    .d-flex {
+      flex-direction: column;
+    }
+  }
+}
