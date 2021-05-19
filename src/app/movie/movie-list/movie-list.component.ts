@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { DialogData, MovieFormComponent } from '../movie-form/movie-form.component';
 
@@ -8,6 +8,7 @@ import { DialogData, MovieFormComponent } from '../movie-form/movie-form.compone
   styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent implements OnInit {
+  notRolledPage = true;
   filmes = [
     {
       numeroFilme: 123,
@@ -62,9 +63,16 @@ export class MovieListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openDialog(filme: any): void {
+  openDialog(filme?: any): void {
     this.dialog.open(MovieFormComponent, {
       data: filme
     });
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  scrolled(event: any): void {
+    if (event) {
+      this.notRolledPage = false;
+    }
   }
 }

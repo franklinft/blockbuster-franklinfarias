@@ -6,6 +6,7 @@
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/v4-shims";
+@import "color";
 
 html, body { height: 100%; background: #000000; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -55,4 +56,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #ffc107;
+}
+
+.mat-menu-content:not(:empty) {
+  background: $colorPrimary !important;
 }

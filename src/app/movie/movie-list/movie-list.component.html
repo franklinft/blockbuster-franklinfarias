@@ -5,9 +5,23 @@
       <mat-card-title class="movie-title">{{filme.nome}}</mat-card-title>
       <mat-card-subtitle class="movie-subtitle">{{filme.diretor}}</mat-card-subtitle>
       <mat-card-actions class="movie-actions">
-        <button mat-button class="movie-edit" (click)="openDialog(filme)">
-          <span class="material-icons">edit</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
         </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openDialog(filme)">
+            <mat-icon>edit</mat-icon>
+            <span>Atualizar Título</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>print</mat-icon>
+            <span>Imprimir</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>delete</mat-icon>
+            <span>Excluir</span>
+          </button>
+        </mat-menu>
       </mat-card-actions>
     </mat-card-header>
     <mat-card-content class="movie-container-image">
@@ -21,3 +35,16 @@
     </mat-card-content>
   </mat-card>
 </div>
+
+<ng-template [ngIf]="notRolledPage">
+  <button class="mat-fab-bottom-right" mat-flat-button>
+    <span class="material-icons">add</span> Novo
+  </button>
+</ng-template>
+
+<ng-template [ngIf]="!notRolledPage">
+  <button class="mat-fab-bottom-right" mat-fab>
+    <span class="material-icons">add</span>
+  </button>
+</ng-template>
+

@@ -13,6 +13,7 @@
     width: 33.33%;
     margin: 5px;
     background: #151515;
+    height: auto;
 
     .movie-title, .movie-year {
       color: #fff;
@@ -42,7 +43,7 @@
       margin-right: 0;
       padding: 0;
 
-      .movie-edit {
+      .mat-icon-button {
         border: 1px solid $colorPrimary;
 
         .material-icons {
@@ -64,6 +65,12 @@
   .filme-card-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   }
+}
+
+.mat-fab-bottom-right {
+  position: fixed;
+  right: 35px;
+  background: $colorPrimary;
 }
 
 @media (max-width: 768px) {
