@@ -38,6 +38,18 @@
       <input matInput placeholder="Diretor" [value]="data?.diretor">
     </mat-form-field>
 
+    <p class="w-100 d-flex">
+      <mat-form-field class="flex-grow-4" appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput placeholder="Descrição do título..." rows="20" [value]="data?.descricao"></textarea>
+      </mat-form-field>
+    </p>
+
+    <mat-form-field appearance="outline" class="flex-grow-3">
+      <mat-label>Data cadastro</mat-label>
+      <input matInput type="date" [value]="data?.dataCadastro">
+    </mat-form-field>
+
     <mat-form-field appearance="outline" class="flex-grow-3">
       <mat-label>Diretores</mat-label>
       <input matInput placeholder="Diretor" [value]="data?.diretor">
@@ -62,22 +74,11 @@
       <input matInput placeholder="Título" [value]="data?.idioma">
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="flex-grow-3">
+    <mat-form-field appearance="outline">
       <mat-label>Valor da locação</mat-label>
       <input matInput placeholder="Título" [value]="data?.preco">
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="flex-grow-3">
-      <mat-label>Data cadastro</mat-label>
-      <input matInput placeholder="Título" type="date" [value]="data?.dataCadastro">
-    </mat-form-field>
-
-    <p class="w-100 d-flex">
-      <mat-form-field class="flex-grow-4" appearance="outline">
-        <mat-label>Descrição</mat-label>
-        <textarea matInput placeholder="Descrição do título..." rows="20" [value]="data?.descricao"></textarea>
-      </mat-form-field>
-    </p>
   </div>
 </div>
 
