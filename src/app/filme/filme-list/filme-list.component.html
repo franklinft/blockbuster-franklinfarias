@@ -1,10 +1,12 @@
-<cdk-virtual-scroll-viewport [itemSize]="filmes.length" class="container-list">
   <div class="filmes-list">
     <mat-card class="movie-card" *ngFor="let filme of filmes">
       <mat-card-header class="movie-card-header">
         <img mat-card-avatar class="filme-card-header-image" src="{{filme.poster}}">
         <mat-card-title class="movie-title">{{filme.nome}}</mat-card-title>
         <mat-card-subtitle class="movie-subtitle">{{filme.diretor}}</mat-card-subtitle>
+        <mat-card-actions class="movie-actions">
+          <button mat-button class="movie-edit" (click)="openDialog(filme)"><span class="material-icons">edit</span></button>
+        </mat-card-actions>
       </mat-card-header>
       <img mat-card-image src="{{filme.poster}}" alt="Photo of a Shiba Inu">
       <mat-card-content>
@@ -13,9 +15,5 @@
           {{filme.descricao}}
         </p>
       </mat-card-content>
-      <mat-card-actions class="movie-actions">
-        <button mat-button class="movie-edit" (click)="openDialog(filme)"><span class="material-icons">edit</span></button>
-      </mat-card-actions>
     </mat-card>
   </div>
-</cdk-virtual-scroll-viewport>

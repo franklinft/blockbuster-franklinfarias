@@ -1,4 +1,10 @@
-.logo {
-  color: #f37100;
-  font-weight: bold;
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .logo {
+    color: #f37100;
+    font-weight: bold;
+  }
 }

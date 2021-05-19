@@ -1,19 +1,16 @@
-.container-list {
-  height: calc(100vh - 30px);
 
 
   .filmes-list {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 
     .movie-card {
       width: 33.33%;
+      margin: 5px;
       background: #151515;
-      margin: 10px;
 
       .movie-card-header {
-        height: 80px;
       }
 
       .movie-title, .movie-year {
@@ -26,7 +23,6 @@
 
       .movie-description {
         color: #d0d0d0;
-        height: 100px;
       }
 
       .movie-actions {
@@ -45,5 +41,4 @@
       background-size: cover;
     }
   }
-}
 
