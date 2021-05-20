@@ -1,6 +1,27 @@
+# Respostas do teste prático referente as questões 11, 13, 14 da CODE7.
+
+# Tarefas realizadas:
+
+1. Protótipo de uma nova propostade de interface para cadastro de filmes. 
+
+Obs: Pensando em oferecer uma melhor experiência ao usuário todas as informações e ações de pesistencias do filme foram mantidas, mas não na tela de cadastro. 
+
+2. Exibir uma listagem de objetos (filmes) com as seguintes propriedades: nome, ano, diretor, gênero, descrição e pôster (url).
+
+3. Customização da interface aplicando conceitos ergonômicos e de web design.
+
+Acesso ao protótipo:
+https://blockbusterfranklinfarias.web.app/
+
+
+
+
+
+
 # Blockbuster
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
+
 
 ## Development server
 
