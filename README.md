@@ -2,8 +2,7 @@
 
 # Tarefas realizadas:
 
-1. Protótipo de baixa fidelidade (wireframe) dessa nova proposta
-de interface para cadastro de filmes. 
+1. Protótipo de uma nova propostade de interface para cadastro de filmes. 
 
 Obs: Pensando em oferecer uma melhor experiência ao usuário todas as informações e ações de pesistencias do filme foram mantidas, mas não na tela de cadastro. 
 
