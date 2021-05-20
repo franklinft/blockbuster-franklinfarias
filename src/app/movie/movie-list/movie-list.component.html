@@ -44,7 +44,7 @@
 </ng-template>
 
 <ng-template [ngIf]="!notRolledPage">
-  <button class="mat-fab-bottom-right" mat-fab>
+  <button class="mat-fab-bottom-right" mat-fab (click)="openDialog()">
     <span class="material-icons">add</span>
   </button>
 </ng-template>
