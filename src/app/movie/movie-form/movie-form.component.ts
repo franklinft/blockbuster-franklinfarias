@@ -30,17 +30,15 @@ export class MovieFormComponent implements OnInit {
   selectedTipoFilme = '';
   selectedGenero = '';
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData, private snackBar: MatSnackBar, public dialogRef: MatDialogRef<MovieListComponent>) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData,
+              private snackBar: MatSnackBar,
+              public dialogRef: MatDialogRef<MovieListComponent>) {
   }
 
   ngOnInit(): void {
     this.selectedTipoProduto = this.data.tipoProduto;
     this.selectedTipoFilme = this.data.tipoFilme;
     this.selectedGenero = this.data.genero;
-
-    console.log(this.selectedGenero);
-    console.log(this.selectedTipoProduto);
-    console.log(this.selectedTipoFilme);
   }
 
   openSnackBar(): void {
