@@ -61,3 +61,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-menu-content:not(:empty) {
   background: $colorPrimary !important;
 }
+
+.success-alert-message-component {
+  text-align: center !important;
+  background-color: $success !important;
+  color: #FFFFFF !important;
+  .mat-simple-snackbar-action {
+    color: #FFFFFF !important;
+  }
+}

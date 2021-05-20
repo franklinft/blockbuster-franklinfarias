@@ -12,17 +12,16 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Tipo Produto</mat-label>
-      <mat-select>
-        <mat-option>
+      <mat-select [(value)]="selectedTipoProduto">
+        <mat-option value="{{data.tipoProduto}}">
           {{data?.tipoProduto}}
         </mat-option>
       </mat-select>
     </mat-form-field>
-
     <mat-form-field appearance="outline">
       <mat-label>Tipo Filme</mat-label>
-      <mat-select>
-        <mat-option>
+      <mat-select [(value)]="selectedTipoFilme">
+        <mat-option value="{{data.tipoFilme}}">
           {{data.tipoFilme}}
         </mat-option>
       </mat-select>
@@ -62,8 +61,8 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Gênero</mat-label>
-      <mat-select>
-        <mat-option>
+      <mat-select [(value)]="selectedGenero">
+        <mat-option value="{{data.genero}}">
           {{data.genero}}
         </mat-option>
       </mat-select>
@@ -86,8 +85,7 @@
   <button mat-button color="primary" mat-dialog-close type="submit">
     <span>Cancelar</span>
   </button>
-  <button mat-raised-button color="primary" type="submit">
+  <button mat-raised-button color="primary" type="submit" (click)="openSnackBar()">
     <span>Salvar</span> <span class="material-icons">save</span>
   </button>
 </mat-dialog-actions>
-

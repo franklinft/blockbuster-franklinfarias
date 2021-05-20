@@ -19,6 +19,10 @@
       flex-direction: row;
       flex-wrap: wrap;
       width: 83.33%;
+
+      .mat-select-value {
+        color: #d0d0d0;
+      }
     }
   }
 
