@@ -1,7 +1,7 @@
-import {Component, Inject, Input, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {MatSnackBar} from "@angular/material/snack-bar";
-import {MovieListComponent} from "../movie-list/movie-list.component";
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MovieListComponent } from '../movie-list/movie-list.component';
 
 export interface DialogData {
     numeroFilme: number;
@@ -25,7 +25,7 @@ export interface DialogData {
   styleUrls: ['./movie-form.component.scss']
 })
 export class MovieFormComponent implements OnInit {
-
+  title = '';
   selectedTipoProduto = '';
   selectedTipoFilme = '';
   selectedGenero = '';
@@ -36,9 +36,11 @@ export class MovieFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.selectedTipoProduto = this.data.tipoProduto;
-    this.selectedTipoFilme = this.data.tipoFilme;
-    this.selectedGenero = this.data.genero;
+    this.selectedTipoProduto = this.data?.tipoProduto;
+    this.selectedTipoFilme = this.data?.tipoFilme;
+    this.selectedGenero = this.data?.genero;
+
+    this.data === null ? this.title = 'Cadastrar Título' : this.title = 'Atualizar Título';
   }
 
   openSnackBar(): void {

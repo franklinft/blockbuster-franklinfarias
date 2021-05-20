@@ -8,6 +8,10 @@
   position: relative;
   top: 90px;
 
+  .movie-card-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  }
+
   .movie-card {
     width: 33.33%;
     margin: 5px;
@@ -43,7 +47,7 @@
       padding: 0;
 
       .mat-icon-button {
-        border: 1px solid $colorPrimary;
+        border: 2px solid $colorPrimary;
 
         .material-icons {
           font-size: 1.5em;
@@ -59,10 +63,24 @@
         }
       }
     }
-  }
 
-  .filme-card-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    .movie-year-price {
+      width: 91.66%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      .movie-price, .movie-year {
+        width: 33.33%;
+      }
+
+      .movie-price {
+        color: $colorPrimary;
+        text-align: end;
+      }
+    }
   }
 }
 

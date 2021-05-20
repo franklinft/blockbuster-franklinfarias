@@ -1,8 +1,18 @@
-<h1 mat-dialog-title class="dialog-title">Atualizar título</h1>
+<h1 mat-dialog-title class="dialog-title">{{title}}</h1>
 <div mat-dialog-content>
-  <mat-card-content class="movie-container-image">
-    <img mat-card-image class="movie-image" src="{{data.poster}}" alt="Photo of a Shiba Inu">
-  </mat-card-content>
+  <ng-template [ngIf]="data !== null">
+    <mat-card-content class="movie-container-image">
+      <img mat-card-image class="movie-image" src="{{data?.poster}}" alt="Photo of a Shiba Inu">
+    </mat-card-content>
+  </ng-template>
+
+  <ng-template [ngIf]="data === null">
+    <mat-card-content class="movie-container-image">
+      <img mat-card-image class="movie-image" src="assets/images/empty.jpg" alt="Photo of a Shiba Inu">
+      <input type="file" name="imageUpload" id="imageUpload" class="hide">
+      <label for="imageUpload" class="btn-image btn-image-large">Escolher imagem</label>
+    </mat-card-content>
+  </ng-template>
 
   <div class="form-container">
     <mat-form-field appearance="outline" class="flex-grow-1">
@@ -13,7 +23,7 @@
     <mat-form-field appearance="outline">
       <mat-label>Tipo Produto</mat-label>
       <mat-select [(value)]="selectedTipoProduto">
-        <mat-option value="{{data.tipoProduto}}">
+        <mat-option value="{{data?.tipoProduto}}">
           {{data?.tipoProduto}}
         </mat-option>
       </mat-select>
@@ -21,8 +31,8 @@
     <mat-form-field appearance="outline">
       <mat-label>Tipo Filme</mat-label>
       <mat-select [(value)]="selectedTipoFilme">
-        <mat-option value="{{data.tipoFilme}}">
-          {{data.tipoFilme}}
+        <mat-option value="{{data?.tipoFilme}}">
+          {{data?.tipoFilme}}
         </mat-option>
       </mat-select>
     </mat-form-field>
@@ -62,8 +72,8 @@
     <mat-form-field appearance="outline">
       <mat-label>Gênero</mat-label>
       <mat-select [(value)]="selectedGenero">
-        <mat-option value="{{data.genero}}">
-          {{data.genero}}
+        <mat-option value="{{data?.genero}}">
+          {{data?.genero}}
         </mat-option>
       </mat-select>
     </mat-form-field>
@@ -73,11 +83,10 @@
       <input matInput placeholder="Título" [value]="data?.idioma">
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
+    <mat-form-field class="movie-price" appearance="outline">
       <mat-label>Valor da locação</mat-label>
       <input matInput placeholder="Título" [value]="data?.preco">
     </mat-form-field>
-
   </div>
 </div>
 

@@ -1,6 +1,6 @@
-import { Component, HostListener, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
-import { DialogData, MovieFormComponent } from '../movie-form/movie-form.component';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MovieFormComponent } from '../movie-form/movie-form.component';
 
 @Component({
   selector: 'app-filme-list',
@@ -64,9 +64,14 @@ export class MovieListComponent implements OnInit {
   }
 
   openDialog(filme?: any): void {
-    this.dialog.open(MovieFormComponent, {
-      data: filme
-    });
+    if (filme !== undefined) {
+      this.dialog.open(MovieFormComponent, {
+        data: filme
+      });
+    } else {
+      this.dialog.open(MovieFormComponent);
+    }
+
   }
 
   @HostListener('window:scroll', ['$event'])
