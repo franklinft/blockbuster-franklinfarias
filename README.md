@@ -13,7 +13,7 @@ Obs: Pensando em oferecer uma melhor experiência ao usuário todas as informaç
 
 3. Customização da interface aplicando conceitos ergonômicos e de web design.
 
-Acesso ao protótipo:
+Acesso a nova proposta:
 https://blockbusterfranklinfarias.web.app/
 
 
