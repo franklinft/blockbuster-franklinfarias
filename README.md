@@ -4,6 +4,9 @@
 
 1. Protótipo de uma nova propostade de interface para cadastro de filmes. 
 
+![WhatsApp Image 2021-05-19 at 16 14 07](https://user-images.githubusercontent.com/40403320/122763613-e847f000-d274-11eb-80d2-038035ac28fc.jpeg)
+
+
 Obs: Pensando em oferecer uma melhor experiência ao usuário todas as informações e ações de pesistencias do filme foram mantidas, mas não na tela de cadastro. 
 
 2. Exibir uma listagem de objetos (filmes) com as seguintes propriedades: nome, ano, diretor, gênero, descrição e pôster (url).
