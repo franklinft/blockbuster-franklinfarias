@@ -2,7 +2,7 @@
 
 # Tarefas realizadas:
 
-1. Criação de protótipo de uma nova proposta para esta interface para cadastro de filmes. 
+1. Criação de protótipo de uma nova proposta para interface para cadastro de filmes. 
 
 ![WhatsApp Image 2021-05-19 at 16 14 07](https://user-images.githubusercontent.com/40403320/122763613-e847f000-d274-11eb-80d2-038035ac28fc.jpeg)
 
